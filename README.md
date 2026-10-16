@@ -1,26 +1,40 @@
-# Episode 05: The Ariane 5 Flight 501 Disaster
+# CodeInspect: Incident Autopsies
 
-Forensic technical autopsy of the Ariane 5 self-destruction on June 4, 1996.
-
-- **Cost of Disaster:** ~$370,000,000 USD
-- **Liftoff to Destruction:** 37 seconds
-- **Root Cause:** Software exception (`Ada Numerical_Error`) during a 64-bit floating-point to 16-bit signed integer conversion.
+Forensic post-mortems, root cause analyses, and executable simulations of history's costliest software crashes, architectural oversights, and system engineering failures.
 
 ---
 
-### Technical Autopsy
+## 📂 Incident Registry
 
-The Inertial Reference System (SRI) software was reused directly from the older **Ariane 4** rocket. Ariane 5 had a significantly steeper flight profile, resulting in horizontal bias values ($BH$) far exceeding $32,767$ (the maximum boundary of a signed 16-bit integer: $2^{15} - 1$).
-
-Because the Ada conversion code lacked an explicit exception handler:
-1. Primary computer (SRI 1) halted execution due to arithmetic overflow.
-2. Secondary backup computer (SRI 2) was running identical code and halted milliseconds later.
-3. Diagnostic telemetry was misinterpreted by the autopilot computer as active flight commands.
-4. Engine nozzles swiveled to physical limits, ripping the rocket apart under aerodynamic shear.
+| Ep | Incident | Date | Failure Mechanism | Impact | Technical Post-Mortem |
+|:--:|:---|:--:|:---|:---|:--:|
+| **#02** | **The Left-Pad Collapse** | Mar 2016 | Fragile transitive dependency & unpublishing | Global npm CI/CD pipeline breakage | [View Autopsy](./02-left-pad) |
+| **#04** | **Knight Capital Group** | Aug 2012 | Dead code execution & feature flag collision | $440M insolvency in 45 minutes | [View Autopsy](./04-knight-capital) |
+| **#05** | **Ariane 5 Flight 501** | Jun 1996 | 64-bit float to 16-bit signed integer overflow | $370M rocket destruction at T+37s | [View Autopsy](./05-ariane-5-overflow) |
 
 ---
 
-### How to Run Simulation
+## 🛠️ Repository Architecture
 
-```bash
-python simulation.py
+Each directory functions as an isolated incident case study containing:
+* **`README.md`**: Complete architectural breakdown, sequence of failure events, root causes, and systemic prevention rules.
+* **Source / Simulation Scripts**: Minimal, runnable reproductions (`simulation.py`, `index.js`) isolating the exact logic trap or defect.
+
+```text
+codeinspect-autopsies/
+├── 02-left-pad/
+│   ├── index.js                  # The 11-line string utility
+│   └── README.md                 # Transitive dependency post-mortem
+├── 04-knight-capital/
+│   ├── simulation.py             # Runaway Power Peg loop simulation
+│   └── README.md                 # Deployment desync & dead code audit
+├── 05-ariane-5-overflow/
+│   ├── simulation.py             # Float64 to Int16 numeric overflow simulation
+│   └── README.md                 # SRI inertial guidance failure audit
+└── README.md                     # Incident index & community hub
+
+## 🌐 Community & Official Links
+
+* 📺 **YouTube:** [https://www.youtube.com/@CodeInspect]
+* 📸 **Instagram:** [https://www.instagram.com/codeinspect_tech)
+* 💬 **Discord:** [https://discord.gg/wR373CCyGf]
