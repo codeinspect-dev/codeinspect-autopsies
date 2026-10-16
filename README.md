@@ -35,6 +35,7 @@ codeinspect-autopsies/
 
  ## 🌐 Community & Official Links
 
-* 📺 **YouTube:** (https://www.youtube.com/@CodeInspect)
-* 📸 **Instagram:** (https://www.instagram.com/codeinspect_tech)
-* 💬 **Discord:** (https://discord.gg/wR373CCyGf)
+* 📺 **[YouTube](https://www.youtube.com/@CodeInspect)**
+* 📸 **[Instagram](https://www.instagram.com/codeinspect_tech)**
+* 💬 **[Discord](https://discord.gg/wR373CCyGf)**
+
