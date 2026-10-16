@@ -33,8 +33,8 @@ codeinspect-autopsies/
 │   └── README.md                 # SRI inertial guidance failure audit
 └── README.md                     # Incident index & community hub
 
-## 🌐 Community & Official Links
+ 🌐 Community & Official Links
 
-* 📺 **YouTube:** [https://www.youtube.com/@CodeInspect]
-* 📸 **Instagram:** [https://www.instagram.com/codeinspect_tech)
-* 💬 **Discord:** [https://discord.gg/wR373CCyGf]
+ 📺 YouTube: [https://www.youtube.com/@CodeInspect]
+ 📸 Instagram: [https://www.instagram.com/codeinspect_tech]
+ 💬 Discord: [https://discord.gg/wR373CCyGf]
